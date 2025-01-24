@@ -37,18 +37,18 @@ document.getElementById('click').onclick = function()
 
 
     // 4. Upper Case Letter
-    let pass = false;
+    let upperPass = false;
     
     for (let i = 0; i < testPassword.length; i++) 
      {
           if (testPassword.charAt(i) != testPassword.charAt(i).toLowerCase())
           {
-               pass = true;
+               upperPass = true;
           } 
 
      }
 
-     if (pass == false)
+     if (upperPass == false)
      {
           document.getElementById('outputUpper').innerHTML = "Password must include at least one uppercase letter.";
      }
@@ -56,6 +56,29 @@ document.getElementById('click').onclick = function()
      {
           document.getElementById('outputUpper').innerHTML = "";
      }
+
+     // 5. Lower Case Letter
+     let lowerPass = false;
+
+     for (let i = 0; i < testPassword.length; i++)
+     {
+          if ( testPassword.charAt(i) != testPassword.charAt(i).toUpperCase())
+          {
+               lowerPass = true;
+          }
+
+     }
+
+     if (lowerPass == false)
+     {
+          document.getElementById('outputLower').innerHTML = "Password must include at least one lowercase letter.";
+     }
+     else
+     {
+          document.getElementById('outputLower').innerHTML = "";
+     }
+
+     // 6. Digit
 
 
 }
