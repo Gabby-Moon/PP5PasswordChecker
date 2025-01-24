@@ -36,7 +36,7 @@ document.getElementById('click').onclick = function()
     }
 
 
-    // 4. Upper Case Letter
+    // -------------------- 4. Upper Case Letter --------------------
     let upperPass = false;
     
     for (let i = 0; i < testPassword.length; i++) 
@@ -57,7 +57,7 @@ document.getElementById('click').onclick = function()
           document.getElementById('outputUpper').innerHTML = "";
      }
 
-     // 5. Lower Case Letter
+     // -------------------- 5. Lower Case Letter --------------------
      let lowerPass = false;
 
      for (let i = 0; i < testPassword.length; i++)
@@ -78,7 +78,25 @@ document.getElementById('click').onclick = function()
           document.getElementById('outputLower').innerHTML = "";
      }
 
-     // 6. Digit
+     // -------------------- 6. Digit --------------------
+     let numPass = 0;
+     for (let i = 0; i < 10; i++)
+     {
+          if(testPassword.includes(i))
+          {
+               numPass ++;
+               break;
+          }
+     }
+
+     if (numPass === 0)
+     {
+          document.getElementById('outputDigit').innerHTML = "Password must include at least one numeric digit.";
+     }
+     else
+     {
+          document.getElementById('outputDigit').innerHTML = "";
+     }
 
 
 }
