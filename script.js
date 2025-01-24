@@ -118,10 +118,12 @@ document.getElementById('click').onclick = function()
      if(validationCheck === true)
      {
           document.getElementById('isValid').innerHTML = "Password is valid!";
+          document.getElementById('isValid').style.color = "green";
      }
      else
      {
           document.getElementById('isValid').innerHTML = "Password is invalid:"
+          document.getElementById('isValid').style.color = "red";
      }
 
 }
